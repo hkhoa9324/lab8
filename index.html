@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/recent_news_boxes.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script defer src="assets/js/app.js"></script>
+  <title>IT NEWs</title>
+</head>
+
+<body>
+  <style>
+    body{
+      background-image: url("assets/images/pngtree-digital-information-technology-network-background-picture-image_1267028.jpg");
+    }
+.header {
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 100; /* Ensure it sits on top of other content */
+  transition: top 0.3s;
+}
+    </style>
+    </head>
+    <body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="#" class="header__logo" aria-label="home-link">
+          <img src="assets/images/it-logo-design-for-information-technology-company-logo-design-vector.jpg" alt="" />
+        </a>
+        <h2>IT NEWs</h2>
+        <input type="text" id="searchInput" placeholder="Nhập từ khóa...">
+        <button onclick="searchFunction()">Tìm Kiếm</button>
+        <nav class="header__nav" role="main-navigation">
+          <ul class="header__list">
+            <li class="header__item">
+              <a href="index.html" class="header__link">Trang chủ</a>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link">Mới nhất</a>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link">Phổ biến</a>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link">Xu hướng</a>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link">Thể loại</a>
+            </li>
+            <li class="header__item">
+              <a href="login.html" class="header__link">Đăng nhập</a>
+            </li>
+          </ul>
+        </nav>
+        <button id="menu-btn" class="hamburger">
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
+        </button>
+        <script>
+          function searchFunction() {
+              // Lấy giá trị từ ô nhập liệu tìm kiếm
+              var searchText = document.getElementById('searchInput').value.toLowerCase();
+              
+              // Thực hiện các hoạt động tìm kiếm ở đây (có thể là ẩn/hiện phần tử, điều chỉnh giao diện, vv.)
+              // Ví dụ: ẩn/hiện các phần tử dựa trên kết quả tìm kiếm
+              // Đây là một ví dụ đơn giản, thực tế bạn cần phải thực hiện tìm kiếm dựa trên nội dung thực của trang web
+              
+              var elementsToSearch = document.getElementsByClassName('searchable'); // Class 'searchable' là các phần tử bạn muốn tìm kiếm
+              for (var i = 0; i < elementsToSearch.length; i++) {
+                  var elementText = elementsToSearch[i].textContent.toLowerCase();
+                  if (elementText.includes(searchText)) {
+                      elementsToSearch[i].style.display = 'block'; // Hiển thị phần tử nếu có kết quả tìm kiếm
+                  } else {
+                      elementsToSearch[i].style.display = 'none'; // Ẩn phần tử nếu không có kết quả tìm kiếm
+                  }
+              }
+          }
+      </script>
+    </div>
+    </div>
+  </header>
+  <nav class="mobile-nav" id="mobile-nav">
+    <ul class="mobile-nav__list">
+      <li class="mobile-nav__item">
+        <a href="#" class="mobile-nav__link">Trang chủ</a>
+      </li>
+      <li class="mobile-nav__item">
+        <a href="#" class="mobile-nav__link">Mới nhất</a>
+      </li>
+      <li class="mobile-nav__item">
+        <a href="#" class="mobile-nav__link">Phổ biến</a>
+      </li>
+      <li class="mobile-nav__item">
+        <a href="#" class="mobile-nav__link">Xu hướng</a>
+      </li>
+      <li class="mobile-nav__item">
+        <a href="#" class="mobile-nav__link">Thể loại</a>
+      </li>
+    </ul>
+  </nav>
+  <main>
+    <section class="news">
+      <div class="container">
+        <div class="news__inner">
+          <article class="news__main">
+            <img src="assets/images/image-web-3-desktop.jpg" alt="Web3 future"
+              class="news__main-cover news__main-cover--desktop" />
+            <img src="assets/images/image-web-3-mobile.jpg" alt="Web3 future"
+              class="news__main-cover news__main-cover--mobile" />
+            <div class="news__main-content">
+              <h1 class="news__main-title">Trang Web cập nhật tin tức dành riêng cho công nghệ</h1>
+              <div class="news__main-info">
+                <p class="news__main-subtitle">
+                  Chúng tôi cố gắng cập nhật những tin tức nóng hổi, mới nhất về công nghệ, điện tử để có thể đưa tới cho người đọc những tin tức thật chất lượng.
+                </p>
+                <a href="news.html" class="read-more">Read more </a>
+              </div>
+            </div>
+          </article>
+          <aside class="news__side">
+            <h2 class="news__side-title">Tin tức mới nhất</h2>
+            <ul class="news__side-list">
+              <li class="news__side-item">
+                <h3 class="news__side-item__title">
+                  <a href="https://thanhnien.vn/apple-muon-thach-thuc-quy-dinh-cua-chau-au-185231121143106399.htm">Apple muốn thách thức quy định của châu Âu</a>
+                </h3>
+                <p class="news__side-item__description">
+                  Apple bất đồng việc châu Âu yêu cầu hãng phải "mở cổng" cho phép người dùng thiết bị sử dụng thêm dịch vụ nhắn tin và kho ứng dụng từ bên ngoài.
+                </p>
+              </li>
+              <li class="news__side-item">
+                <h3 class="news__side-item__title">
+                  <a href="https://thanhnien.vn/aws-dang-sang-tao-va-doi-moi-voi-cong-nghe-ai-tao-sinh-18523112115032593.htm">AWS đang sáng tạo và đổi mới với công nghệ AI tạo sinh</a>
+                </h3>
+                <p class="news__side-item__description">
+                  Các tổ chức đang tái định hình việc tạo nội dung, nâng cao năng suất nhân viên, cải thiện trải nghiệm khách hàng và phát triển kỹ năng nhân viên nhờ công nghệ AI tạo sinh của AWS.
+                </p>
+              </li>
+              <li class="news__side-item">
+                <h3 class="news__side-item__title">
+                  <a href="https://thanhnien.vn/winrar-tiep-tuc-bi-tin-tac-loi-dung-lo-hong-de-tan-cong-185231121105707132.htm"> WinRAR tiếp tục bị tin tặc lợi dụng lỗ hổng để tấn công</a>
+                </h3>
+                <p class="news__side-item__description">
+                  Một lỗ hổng tồn tại trong phần mềm nén tệp WinRAR vẫn đang được các tin tặc dùng để tấn công các cơ quan chính phủ.
+                </p>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+    <section class="recentNews">
+        <div class="container">
+          <h2 class="news-title">Tin tức gần đây</h2>
+          <div class="row">
+            <div class="ct-blog col-sm-6 col-md-4">
+              <div class="inner">
+                <div class="fauxcrop">
+                  <a href="https://thanhnien.vn/samsung-bat-dau-phat-hanh-android-14-cho-galaxy-s22-series-185231121123948309.htm"><img alt="News Entry" src="assets/images/news/galaxy-s22-android-14-one-ui-60-1700546295520716630290.webp"></a>
+                </div>
+                <div class="ct-blog-content">
+                  <div class="ct-blog-date">
+                    <span>Tháng 11</span><strong>21</strong>
+                  </div>
+                  <h3 class="ct-blog-header">
+                    Samsung bắt đầu phát hành Android 14 cho Galaxy S22 series
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="ct-blog col-sm-6 col-md-4">
+              <div class="inner">
+                <div class="fauxcrop">
+                  <a href="https://thanhnien.vn/lhmt-t1-chao-don-hlv-kkoma-tro-ve-nha-185231121105514174.htm"><img alt="News Entry" src="assets/images/news/402128187303330102604320885361499448966757n-17005384832351008777103.webp"></a>
+                </div>
+                <div class="ct-blog-content">
+                  <div class="ct-blog-date">
+                    <span>Tháng 11</span><strong>21</strong>
+                  </div>
+                  <h3 class="ct-blog-header">
+                    LHMT: T1 chào đón HLV kkOma trở về nhà
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="ct-blog col-sm-6 col-md-4">
+              <div class="inner">
+                <div class="fauxcrop">
+                  <a href="https://thanhnien.vn/apple-se-mang-den-cai-tien-quan-trong-cho-iphone-16-185231121074419605.htm"><img alt="News Entry" src="assets/images/news/iphone-16-1700527258119368283031.jpg"></a>
+                </div>
+                <div class="ct-blog-content">
+                  <div class="ct-blog-date">
+                    <span>Tháng 11</span><strong>21</strong>
+                  </div>
+                  <h3 class="ct-blog-header">
+                    Apple sẽ mang đến cải tiến quan trọng cho iPhone 16
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="ct-blog col-sm-6 col-md-4">
+              <div class="inner">
+                <div class="fauxcrop">
+                  <a href="https://thanhnien.vn/dien-thoai-gap-duoc-gioi-tre-quan-tam-185231123220355441.htm"><img alt="News Entry" src="assets/images/news/dien-thoai-gap-1700751898709682135941.webp"></a>
+                </div>
+                <div class="ct-blog-content">
+                  <div class="ct-blog-date">
+                    <span>Tháng 11</span><strong>24</strong>
+                  </div>
+                  <h3 class="ct-blog-header">
+                    Điện thoại gập được giới trẻ quan tâm
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="ct-blog col-sm-6 col-md-4">
+              <div class="inner">
+                <div class="fauxcrop">
+                  <a href="https://thanhnien.vn/nvidia-bi-kien-vi-nhan-vien-danh-cap-ma-nguon-cua-doi-tac-18523112411275235.htm"><img alt="News Entry" src="assets/images/news/valeo-nvidia-17008003666181159207307.webp"></a>
+                </div>
+                <div class="ct-blog-content">
+                  <div class="ct-blog-date">
+                    <span>Tháng 11</span><strong>24</strong>
+                  </div>
+                  <h3 class="ct-blog-header">
+                    Nvidia bị kiện vì nhân viên đánh cắp mã nguồn của đối tác
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="ct-blog col-sm-6 col-md-4">
+              <div class="inner">
+                <div class="fauxcrop">
+                  <a href="https://thanhnien.vn/thay-gi-tu-loat-ky-luc-cua-chung-ket-the-gioi-lien-minh-huyen-thoai-185231124095757703.htm"><img alt="News Entry" src="assets/images/news/picture1-1700794488203695242133.webp"></a>
+                </div>
+                <div class="ct-blog-content">
+                  <div class="ct-blog-date">
+                    <span>Tháng 11</span><strong>24</strong>
+                  </div>
+                  <h3 class="ct-blog-header">
+                    Thấy gì từ loạt kỷ lục của chung kết thế giới Liên Minh Huyền Thoại?
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="btn-news btn-contests">
+            <a href="#">VIEW ALL NEWS</a>
+          </div>
+        </div>
+      </section>
+    <section class="recent">
+      <div class="container">
+        <div class="recent__inner">
+          <ul class="recent__list">
+            <li class="recent__item">
+              <article class="recent__article">
+                <img class="recent__article-cover" src="assets/images/image-retro-pcs.jpg" alt="">
+                <div class="recent__article-info">
+                  <span class="recent__article-number">01</span>
+                  <h4 class="recent__article-title">
+                    <a href="https://www.avg.com/en/signal/how-to-revive-an-old-pc"> Reviving Retro PCs
+                    </a>
+                  </h4>
+                  <p class="recent__article-subtitle">What happens when old PCs are given modern upgrades?
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li class="recent__item">
+              <article class="recent__article">
+                <img class="recent__article-cover" src="assets/images/image-top-laptops.jpg" alt="">
+                <div class="recent__article-info">
+                  <span class="recent__article-number">02</span>
+                  <h4 class="recent__article-title">
+                    <a href="https://www.theverge.com/21250695/best-laptops"> Top 10 Laptop 2023
+                    </a>
+                  </h4>
+                  <p class="recent__article-subtitle">Our best picks for various needs and budgets.
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li class="recent__item">
+              <article class="recent__article">
+                <img class="recent__article-cover" src="assets/images/image-gaming-growth.jpg" alt="">
+                <div class="recent__article-info">
+                  <span class="recent__article-number">03</span>
+                  <h4 class="recent__article-title">
+                    <a href="https://blog.bccresearch.com/video-games-industry-is-still-growing-but-why"> The Growth of Gaming
+                    </a>
+                  </h4>
+                  <p class="recent__article-subtitle">How the pandemic has sparked fresh opportunities.
+                  </p>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
